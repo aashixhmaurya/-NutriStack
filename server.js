@@ -25,6 +25,7 @@ app.use(cors({
 }));
 
 app.use(express.json());
+app.use(express.static(__dirname));
 
 // Initialize Gemini SDK
 const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
