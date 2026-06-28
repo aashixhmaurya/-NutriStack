@@ -1,0 +1,83 @@
+.container {
+            width: 100%;
+            max-width: var(--container-max);
+            margin-inline: auto;
+            padding-inline: var(--container-px);
+        }
+
+.section {
+            padding-block: var(--space-4xl);
+        }
+
+.section:nth-child(even) {
+            background-color: var(--surface-section);
+        }
+
+.section__header {
+            text-align: center;
+            max-width: 640px;
+            margin-inline: auto;
+            margin-bottom: var(--space-3xl);
+        }
+
+.section__label {
+            display: inline-block;
+            font-family: var(--ff-heading);
+            font-size: var(--fs-sm);
+            font-weight: var(--fw-semibold);
+            color: var(--clr-primary-500);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: var(--space-sm);
+        }
+
+.section__title {
+            font-size: var(--fs-3xl);
+            font-weight: var(--fw-bold);
+            margin-bottom: var(--space-md);
+        }
+
+.section__subtitle {
+            font-size: var(--fs-md);
+            color: var(--text-secondary);
+            line-height: var(--lh-relaxed);
+        }
+
+.footer {
+            background: #1f1f1f;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 2rem 1rem;
+            margin-top: 4rem;
+        }
+
+.footer__bottom {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+.footer__copyright {
+            font-size: 0.95rem;
+            color: #ffffff;
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+        }
+
+.footer__disclaimer {
+            font-size: 0.9rem;
+            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+.footer__credit {
+            margin-top: 1.2rem;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.85);
+            text-align: center;
+            letter-spacing: 0.3px;
+        }
+
+.footer__credit strong {
+            color: #ffffff;
+            font-weight: 600;
+        }

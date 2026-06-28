@@ -1,0 +1,132 @@
+body.dark-mode .navbar--scrolled {
+            background: #181a1b;
+            box-shadow: 0 1px 0 rgba(255, 255, 255, .05);
+        }
+
+body.dark-mode .about__disclaimer {
+            background: #4d2c00;
+            border-left: 3px solid #d9901a;
+        }
+
+body.dark-mode .about__disclaimer p {
+            color: #f2dfc0;
+        }
+
+body.dark-mode .about__disclaimer svg {
+            color: #f4a524;
+        }
+
+body.dark-mode .about__feature {
+            background: #1e2021;
+            border: 1px solid #343638;
+        }
+
+body.dark-mode .footer {
+            background: #161717;
+        }
+
+body.dark-mode {
+            --surface-page: #1b1d1d;
+            --surface-card: #202223;
+            --surface-section: #181a1b;
+            --text-primary: #ece8df;
+            --text-secondary: #c8c3b8;
+            --text-muted: #8d8d8d;
+        }
+
+body.dark-mode .navbar {
+            background: #181a1b;
+        }
+
+body.dark-mode .navbar__link--active {
+            background: #153a22;
+            color: #63d37f;
+        }
+
+body.dark-mode .navbar__link:hover {
+            background: #153a22;
+            color: #63d37f;
+        }
+
+body.dark-mode .food-card,
+        body.dark-mode .faq-item,
+        body.dark-mode .category-card,
+        body.dark-mode .nutrient-detail-container,
+        body.dark-mode .about__feature,
+        body.dark-mode .nutrient-sidebar {
+            border-color: #343638;
+        }
+
+body.dark-mode .nutrient-sidebar {
+            border-right: 1px solid #343638;
+        }
+
+body.dark-mode .chatbot__msg--bot {
+            background: #2a2c2e;
+            color: #ece8df;
+        }
+
+body.dark-mode .chatbot__input {
+            background: #2a2c2e;
+            border: 1px solid #3a3d3f;
+            color: #ece8df;
+        }
+
+body.dark-mode .chatbot__input::placeholder {
+            color: #9a9a9a;
+        }
+
+body.dark-mode .chatbot__quick-btn {
+            background: #2a2c2e;
+            color: #d8d8d8;
+        }
+
+body.dark-mode .food-card__tag {
+            background: #183b25;
+            color: #9be7ab;
+            border: 1px solid rgba(99,211,127,.18);
+        }
+
+body.dark-mode .nutrient-detail-header {
+            background: #26292b;
+            border-bottom: 1px solid #343638;
+        }
+
+body.dark-mode .subnutrient-item:hover {
+            background: #2d3032;
+            color: #fff;
+        }
+
+body.dark-mode .subnutrient-item.active {
+            background: #21693d;
+            box-shadow: 0 0 0 1px rgba(99,211,127,.15);
+            color: #fff;
+        }
+
+body.dark-mode .detail-section h4 {
+            color: #74d88a;
+            border-bottom: 1px solid #2d6b45;
+        }
+
+body.dark-mode .btn-back {
+            background: #2b2d2f;
+            color: #d7d7d7;
+            border: 1px solid #444;
+        }
+
+body.dark-mode .btn-back:hover {
+            background: #36383a;
+        }
+
+body.dark-mode .nutrient-sidebar {
+            background: #222426;
+        }
+
+body.dark-mode .nutrient-content {
+            background: #202224;
+        }
+
+body.dark-mode .detail-section p,
+        body.dark-mode .detail-list li {
+            color: #c7c7c7;
+        }

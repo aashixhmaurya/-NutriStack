@@ -1,0 +1,129 @@
+@media (max-width: 1024px) {
+             :root {
+                --fs-4xl: 2.5rem;
+                --fs-3xl: 2rem;
+            }
+            .navbar__nav {
+                position: fixed;
+                top: 0;
+                right: -300px;
+                width: 280px;
+                height: 100vh;
+                background-color: var(--clr-neutral-0);
+                flex-direction: column;
+                align-items: stretch;
+                padding: calc(var(--nav-height) + var(--space-lg)) var(--space-lg) var(--space-lg);
+                gap: var(--space-xs);
+                box-shadow: var(--shadow-xl);
+                transition: right var(--duration-slow) var(--ease-default);
+                z-index: var(--z-navbar);
+            }
+            .navbar__nav--open {
+                right: 0;
+            }
+            .navbar__nav .navbar__link {
+                color: var(--text-primary);
+                padding: var(--space-md) var(--space-lg);
+                border-radius: var(--radius-md);
+                font-size: var(--fs-base);
+            }
+            .navbar__nav .navbar__link:hover,
+            .navbar__nav .navbar__link--active {
+                color: var(--clr-primary-600);
+                background-color: var(--clr-primary-50);
+            }
+            .navbar__hamburger {
+                display: flex;
+            }
+            .about__grid {
+                grid-template-columns: 1fr;
+                gap: var(--space-2xl);
+            }
+        }
+
+@media (max-width: 768px) {
+             :root {
+                --fs-4xl: 2rem;
+                --fs-3xl: 1.75rem;
+                --space-4xl: 4rem;
+            }
+            .section__header {
+                margin-bottom: var(--space-2xl);
+            }
+            .nutrients-nav {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+            .nutrient-layout {
+                flex-direction: column;
+            }
+            .nutrient-sidebar {
+                width: 100%;
+                border-right: none;
+                border-bottom: 1px solid var(--clr-neutral-200);
+                max-height: 200px;
+            }
+            .food-sources__grid {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+            .tips__grid {
+                grid-template-columns: 1fr;
+            }
+            .hero__stats {
+                gap: var(--space-xl);
+            }
+            .chatbot {
+                right: var(--space-md);
+                left: var(--space-md);
+                bottom: calc(var(--space-xl) + 56px);
+                width: auto;
+                max-height: 480px;
+            }
+        }
+
+@media (max-width: 480px) {
+             :root {
+                --fs-4xl: 1.65rem;
+                --fs-3xl: 1.5rem;
+                --fs-2xl: 1.5rem;
+                --container-px: 1rem;
+                --space-4xl: 3rem;
+            }
+            .hero {
+                min-height: 90vh;
+            }
+            .hero__actions {
+                flex-direction: column;
+                width: 100%;
+            }
+            .hero__actions .btn {
+                width: 100%;
+            }
+            .hero__stats {
+                flex-direction: column;
+                gap: var(--space-lg);
+            }
+            .hero__scroll-hint {
+                display: none;
+            }
+            .food-sources__grid {
+                grid-template-columns: 1fr;
+            }
+            .tip-card {
+                flex-direction: column;
+            }
+            .chatbot__fab {
+                bottom: var(--space-md);
+                right: var(--space-md);
+                padding: 0.75rem 1.1rem;
+            }
+            .chatbot {
+                right: var(--space-sm);
+                left: var(--space-sm);
+                bottom: calc(var(--space-md) + 52px);
+                max-height: 420px;
+            }
+            .chatbot__messages {
+                min-height: 180px;
+                max-height: 240px;
+            }
+        }

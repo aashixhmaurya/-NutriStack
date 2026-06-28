@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="NutriStack — Understand essential nutrients, discover food sources, and get personalized nutrition guidance with our AI-powered assistant." />
+    <meta name="keywords" content="nutrition, vitamins, minerals, protein, healthy eating, diet, food sources, health tips" />
+    <meta name="author" content="NutriStack" />
+    <title>NutriStack — Understand Nutrition. Eat Better. Live Healthier.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/navbar.css">
+    <link rel="stylesheet" href="assets/css/hero.css">
+    <link rel="stylesheet" href="assets/css/nutrients.css">
+    <link rel="stylesheet" href="assets/css/foods.css">
+    <link rel="stylesheet" href="assets/css/chatbot.css">
+    <link rel="stylesheet" href="assets/css/darkmode.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body>
+    <header class="navbar" id="navbar">
+        <div class="navbar__container">
+            <a href="#home" class="navbar__logo">
+                <span class="navbar__logo-icon">🥗</span>
+                <span class="navbar__logo-text">NutriStack</span>
+            </a>
+
+            <nav class="navbar__nav" id="navMenu">
+                <a href="#home" class="navbar__link navbar__link--active">Home</a>
+                <a href="#nutrients" class="navbar__link">Nutrients</a>
+                <a href="#food-sources" class="navbar__link">Food Sources</a>
+                <a href="#tips" class="navbar__link">Tips</a>
+                <a href="#faq" class="navbar__link">FAQ</a>
+                <a href="#about" class="navbar__link">About</a>
+            </nav>
+
+            <div class="navbar__actions">
+                <button class="navbar__search-btn" id="searchToggle" aria-label="Toggle search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+                <button id="themeToggle" class="theme-toggle" aria-label="Toggle Theme">
+    🌙
+</button>
+                <button class="navbar__hamburger" id="hamburgerBtn" aria-label="Toggle navigation menu">
+          <span></span><span></span><span></span>
+        </button>
+            </div>
+        </div>
+
+        <div class="search-bar" id="searchBar" role="search">
+            <div class="search-bar__container">
+                <svg class="search-bar__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                <input type="text" class="search-bar__input" id="searchInput" placeholder="Search nutrients, foods, tips..." autocomplete="off" aria-label="Search nutrients, foods, and tips" />
+                <button class="search-bar__close" id="searchClose" aria-label="Close search">&times;</button>
+            </div>
+            <div class="search-bar__results" id="searchResults"></div>
+        </div>
+    </header>
+
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
+    <main id="mainContent">
+
+        <section class="hero" id="home">
+            <div class="hero__overlay"></div>
+            <div class="hero__content">
+                <h1 class="hero__title">Understand Nutrition.<br />Eat Better. Live Healthier.</h1>
+                <p class="hero__subtitle">
+                    Discover essential nutrients, explore food sources, and get instant answers from our intelligent nutrition assistant — all in one place.
+                </p>
+                <div class="hero__actions">
+                    <a href="#nutrients" class="btn btn--primary" id="heroCtaPrimary">Explore Nutrients</a>
+                    <a href="#about" class="btn btn--outline" id="heroCtaSecondary">Learn More</a>
+                </div>
+                <div class="hero__stats">
+                    <div class="hero__stat">
+                        <span class="hero__stat-number">7</span>
+                        <span class="hero__stat-label">Essential Nutrients</span>
+                    </div>
+                    <div class="hero__stat">
+                        <span class="hero__stat-number">10+</span>
+                        <span class="hero__stat-label">Food Sources</span>
+                    </div>
+                    <div class="hero__stat">
+                        <span class="hero__stat-number">AI</span>
+                        <span class="hero__stat-label">Powered Assistant</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero__scroll-hint" aria-hidden="true">
+                <span>Scroll to explore</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+        </section>
+
+        
+        <section class="section nutrients" id="nutrients">
+            <div class="container">
+                <div class="section__header">
+                    <span class="section__label">Essential Nutrients</span>
+                    <h2 class="section__title">The Complete Nutrition Guide</h2>
+                    <p class="section__subtitle">Select a nutrient category below to explore detailed scientific information, benefits, and food sources.</p>
+                </div>
+
+                
+                <div class="nutrients-nav" id="nutrientsNav">
+                    
+                </div>
+
+                
+                <div class="nutrient-detail-container" id="nutrientDetailContainer" style="display: none;">
+                    <div class="nutrient-detail-header">
+                        <button class="btn-back" id="btnBackToCategories">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+              Back to Categories
+           </button>
+                        <h3 class="nutrient-detail-title" id="detailMainTitle">Category Title</h3>
+                    </div>
+
+                    <div class="nutrient-layout">
+                        
+                        <aside class="nutrient-sidebar" id="nutrientSidebar" style="display: none;">
+                            <ul class="subnutrient-list" id="subnutrientList">
+                                
+                            </ul>
+                        </aside>
+
+                        
+                        <article class="nutrient-content" id="nutrientContentPane">
+                            
+                        </article>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        
+        <section class="section food-sources" id="food-sources">
+            <div class="container">
+                <div class="section__header">
+                    <span class="section__label">Food Sources</span>
+                    <h2 class="section__title">Nutrient-Rich Foods</h2>
+                    <p class="section__subtitle">These common, accessible foods pack a powerful nutritional punch. Include them in your daily diet for optimal health.</p>
+                </div>
+                <div class="food-sources__grid" id="foodSourcesGrid">
+                </div>
+            </div>
+        </section>
+
+        <section class="section tips" id="tips">
+            <div class="container">
+                <div class="section__header">
+                    <span class="section__label">Daily Tips</span>
+                    <h2 class="section__title">Simple Habits for Better Nutrition</h2>
+                    <p class="section__subtitle">Small changes in your daily eating habits can make a big difference over time. Here are practical tips to get started.</p>
+                </div>
+                <div class="tips__grid" id="tipsGrid">
+                </div>
+            </div>
+        </section>
+
+        <section class="section faq" id="faq">
+            <div class="container">
+                <div class="section__header">
+                    <span class="section__label">FAQ</span>
+                    <h2 class="section__title">Frequently Asked Questions</h2>
+                    <p class="section__subtitle">Find answers to the most common questions about nutrition, diet, and healthy eating.</p>
+                </div>
+                <div class="faq__list" id="faqList">
+                </div>
+            </div>
+        </section>
+
+        <section class="section about" id="about">
+            <div class="container">
+                <div class="about__grid">
+                    <div class="about__content">
+                        <span class="section__label">About NutriStack</span>
+                        <h2 class="section__title">Our Mission</h2>
+                        <p class="about__text">
+                            NutriStack is an educational platform dedicated to making nutrition information accessible, understandable, and actionable for everyone. We believe that understanding what you eat is the first step toward a healthier life.
+                        </p>
+                        <p class="about__text">
+                            Our content is based on well-researched nutrition science and presented in a simple, beginner-friendly format. Whether you are a student, a fitness enthusiast, or simply curious about healthy eating — NutriStack is here to help.
+                        </p>
+                        <div class="about__disclaimer">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                            <p><strong>Disclaimer:</strong> NutriStack provides educational content only. It is not a substitute for professional medical advice, diagnosis, or treatment. Always consult a qualified healthcare provider for personalized guidance.</p>
+                        </div>
+                    </div>
+                    <div class="about__features">
+                        <div class="about__feature">
+                            <span class="about__feature-icon">📚</span>
+                            <h3>Research-Based</h3>
+                            <p>All content is grounded in established nutrition science and health guidelines.</p>
+                        </div>
+                        <div class="about__feature">
+                            <span class="about__feature-icon">🤖</span>
+                            <h3>AI Assistant</h3>
+                            <p>Get instant answers to your nutrition questions with our intelligent chatbot.</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__bottom">
+                <p class="footer__copyright">
+                    © 2026 NutriStack. All rights reserved.
+                </p>
+
+                <p class="footer__disclaimer">
+                    NutriStack provides educational nutrition information for learning purposes only. The content on this website is not intended to diagnose, treat, cure, or prevent any disease. Always consult a qualified healthcare professional before making medical or
+                    dietary decisions.
+                </p>
+                <p class="footer__credit">
+                    ❤️ Designed & Developed by <strong>Aashixhmaurya</strong>
+                </p>
+
+            </div>
+        </div>
+    </footer>
+
+    <button class="chatbot__fab" id="chatbotFab" aria-label="Open AI Assistant">
+    <svg class="chatbot__fab-icon chatbot__fab-icon--chat" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+    <svg class="chatbot__fab-icon chatbot__fab-icon--close" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    <span class="chatbot__fab-label">Ask AI</span>
+  </button>
+
+    <div class="chatbot" id="chatbotWindow" role="region" aria-label="Nutrition Chat Assistant">
+        <div class="chatbot__header">
+            <div class="chatbot__header-info">
+                <span class="chatbot__avatar" aria-hidden="true">🤖</span>
+                <div>
+                    <h3 class="chatbot__name">NutriStack AI</h3>
+                    <span class="chatbot__status">Online • Powered by nutrition data</span>
+                </div>
+            </div>
+            <button class="chatbot__close" id="chatbotClose" aria-label="Close chat">&times;</button>
+        </div>
+
+        <div class="chatbot__quick" id="chatbotQuick" aria-label="Quick questions">
+        </div>
+
+        <div class="chatbot__messages" id="chatbotMessages" aria-live="polite">
+        </div>
+
+        <div class="chatbot__input-area">
+            <input type="text" class="chatbot__input" id="chatbotInput" placeholder="Ask about nutrition..." autocomplete="off" aria-label="Ask a question about nutrition" />
+            <button class="chatbot__send" id="chatbotSend" aria-label="Send message">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+      </button>
+        </div>
+    </div>
+
+    <script src="data/nutrients.js"></script>
+    <script src="assets/js/utils.js"></script>
+    <script src="assets/js/ui.js"></script>
+    <script src="assets/js/navbar.js"></script>
+    <script src="assets/js/search.js"></script>
+    <script src="assets/js/nutrients.js"></script>
+    <script src="assets/js/chatbot.js"></script>
+    <script src="assets/js/darkmode.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+
+</html>
