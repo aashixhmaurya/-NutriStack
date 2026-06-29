@@ -1,44 +1,62 @@
 # NutriStack
 
-NutriStack is a nutrition education website that helps people understand essential nutrients in a simple and interactive way. The idea behind this project was to create a place where anyone can learn about nutrition without reading long and confusing articles.
+A simple and interactive nutrition education website that helps people learn about essential nutrients, healthy foods, and balanced diets.
 
-Instead of showing only basic information, NutriStack organizes nutrients into categories and provides detailed explanations about their functions, benefits, food sources, recommended intake, deficiency symptoms, and possible risks of excessive intake. Everything is presented in a clean interface that works well on desktop as well as mobile devices.
+## Live Demo
 
-The project also includes an AI powered chatbot that uses the Google Gemini API. Users can ask nutrition related questions in natural language and receive informative responses instantly. The chatbot is designed to feel like a part of the website instead of a separate tool.
+**Website:** https://nutristack.onrender.com
+
+---
+
+## About the Project
+
+NutriStack was created to make nutrition information easier to understand and access. Instead of searching multiple websites, users can explore everything in one place through a clean and organized interface.
+
+The website provides information about vitamins, minerals, food sources, deficiency symptoms, health benefits, and recommended intake. It also includes an interactive chatbot that can answer nutrition-related questions, making the learning experience more engaging.
+
+The interface is responsive and works smoothly on desktop, tablet, and mobile devices.
+
+---
 
 ## Features
 
-* Detailed guide for essential nutrients
-* Separate sections for vitamins and minerals with individual information
-* Food sources for important nutrients
+* Detailed information about essential nutrients
+* Separate sections for vitamins and minerals
+* Food sources for different nutrients
+* Deficiency symptoms and health benefits
 * Daily nutrition tips
-* Frequently asked questions
-* AI powered nutrition chatbot using Google Gemini
+* Frequently Asked Questions (FAQ)
+* Interactive nutrition chatbot
 * Live search functionality
-* Light and dark mode
-* Responsive design for desktop tablets and mobile devices
-* Clean and organized user interface
+* Light and Dark mode
+* Fully responsive design
+* Clean and easy-to-use interface
+
+---
 
 ## Tech Stack
 
-Frontend
+### Frontend
 
 * HTML5
 * CSS3
 * JavaScript
 
-Backend
+### Backend
 
 * Node.js
 * Express.js
 
-AI
+### Deployment
 
-* Google Gemini API
+* GitHub
+* Render
+
+---
 
 ## Project Structure
 
-```text
+```
 NutriStack
 │
 ├── assets
@@ -48,67 +66,41 @@ NutriStack
 │
 ├── data
 │
-├── node_modules
-│
 ├── index.html
 ├── server.js
 ├── package.json
+├── package-lock.json
 ├── .env.example
 ├── .gitignore
 └── README.md
 ```
 
-## Getting Started
-
-Clone the repository
-
-```bash
-git clone https://github.com/your-username/NutriStack.git
-```
-
-Move into the project folder
-
-```bash
-cd NutriStack
-```
-
-Install dependencies
-
-```bash
-npm install
-```
-
-Create a `.env` file in the project root and add your Gemini API key
-
-```env
-GEMINI_API_KEY=YOUR_API_KEY
-PORT=3000
-```
-
-Start the backend
-
-```bash
-npm start
-```
-
-Open `index.html` using Live Server or any local web server and start exploring the website.
-
 ## Why I Built This
 
-I wanted to build something that was both educational and practical. Nutrition is a topic that many people search for every day, but reliable information is often scattered across different websites. NutriStack brings everything together in one place with a simple interface and an AI assistant that makes learning easier.
+I wanted to create a website that makes nutrition information simple, organized, and easy to understand. Many people search for health and nutrition advice online, but the information is often spread across different websites and can be confusing.
 
-This project also gave me the opportunity to work with frontend development, responsive design, API integration, and backend development while keeping the project organized with a modular file structure.
+NutriStack brings everything together in one place, allowing users to quickly learn about nutrients, healthy foods, and balanced diets through a simple and user-friendly interface.
+
+Building this project also helped me improve my skills in frontend development, backend development, API integration, responsive design, and project deployment.
+
+---
 
 ## Future Improvements
 
-* Conversation history
-* Voice input for the chatbot
+* Personalized diet recommendations
+* BMI Calculator
+* Calorie Tracker
+* Meal Planner
+* User accounts
+* Saved chat history
+* Voice input
+* Multi-language support
 * More nutrition categories
-* Personalized nutrition recommendations
-* User accounts and saved chats
-* Multi language support
+
+---
 
 ## License
 
-This project is open for learning and personal use.
-Copyright © 2026 Aashish Maurya.
+This project is intended for learning and educational purposes.
+
+© 2026 Aashish Maurya. All rights reserved.
